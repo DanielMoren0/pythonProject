@@ -7,8 +7,9 @@ import matplotlib.dates as mdates
 
 #solo admite bibliotecas
 def impresion_datos_extraidos (results_df):
-
-    print(tabulate(results_df, tablefmt="github", headers=results_df.keys()))
+    lista = ["ciudad_municipio_nom", "departamento_nom", "edad", "fuente_tipo_contagio", "estado", "pais_viajo_1_nom"]
+    print(tabulate(results_df[lista], tablefmt="pretty", headers=
+    ["Numero de registro", "Ciudad de ubicación", "Departamento", "Edad", "Tipo", "Estado", "Pais de Procedencia"]))
 
 def imprimir_informacion_general_y_sumario_df (df):
 
